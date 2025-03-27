@@ -1,0 +1,54 @@
+<html>
+<title><pay slip></title>
+<script type="text/javascript">
+<head>
+function pay()
+{ 
+  var a=parseInt(document.slip.Bpay.value);
+  var b=parseInt(document.slip.loan.value);
+  var c=parseInt(document.slip.PF.value);
+  var d=parseInt(document.slip.insurance.value);
+  if(a<=20000)
+     {
+     var dd=a*(38/100);
+     var hh=500;
+     document.slip.DA.value=dd;
+     document.slip.HRA.value=hh;
+     }
+    else if(a>20000&&a<=30000)
+    {
+    var dd=a*(30/100);
+     var hh=250;
+     document.slip.DA.value=dd;
+     document.slip.HRA.value=hh;
+     }
+    else
+    {
+     var dd=a*(25/100);
+     var hh=150;
+     document.slip.DA.value=dd;
+     document.slip.HRA.value=hh;
+    }
+    var gg=a+dd+hh;
+    document.slip.gpay.value=gg;
+    np=gg.(b+c+d)
+    document.slip.npay.value=np;
+}
+</script>
+</head>
+<body>
+<form name="slip">
+E-id:<input type ="text" name="E-id"><br><br>
+E-name:<input type="text" name=" E-name"><br><br>
+Bpay:<input type="text" name="Bpay"><br><br>
+loan:<input type="text" name="loan"><br><br>
+PF:<input type="text" name="PF"><br><br>
+insurance:<input type="text" name="insurance"><br><br><br><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type= "button" value="Submit"onclick=pay();><br><br><br>
+DA:<input type="text" name="DA"><br><br>
+HRA:<input type="text" name="HRA"><br><br>
+Gpay:<input type="text" name="gpay"><br><br>
+Npay:<input type="text" name="Npay"><br><br>
+</form>
+</body>
+
